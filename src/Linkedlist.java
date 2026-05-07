@@ -13,6 +13,21 @@ public class Linkedlist {
         }
         temp.next = newnode;
     }
+    void search(int value){
+         Node temp = head;
+
+         while (temp!=null){
+
+             if (temp.data == value){
+                 System.out.println("value found");
+                 return;
+             }
+             temp = temp.next;
+         }
+        System.out.println("Value Not Found");
+
+
+    }
     void display(){
         Node temp = head;
 
@@ -29,6 +44,8 @@ public class Linkedlist {
         ll.insert(20);
         ll.insert(30);
         ll.display();
+        ll.search(20);
+
     }
 
 }
